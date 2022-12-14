@@ -12,5 +12,6 @@ jobs:
         env:
           MATURIN_PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
         with:
+          working-directory: random-partition-py
           command: build
           args: --release
