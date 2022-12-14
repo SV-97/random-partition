@@ -1,0 +1,16 @@
+name: Publish Python release
+
+on:
+  push:
+
+jobs:
+  manylinux-x64_64:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: PyO3/maturin-action@v1
+        env:
+          MATURIN_PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
+        with:
+          command: build
+          args: --release
