@@ -83,6 +83,6 @@ jobs:
           MATURIN_PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
         with:
           working-directory: random-partition-py
-          target: aarch64-unknown-linux-gnu
+          target: aarch64-apple-darwin
           command: publish
           args: -i python3.10 --skip-existing --no-sdist
