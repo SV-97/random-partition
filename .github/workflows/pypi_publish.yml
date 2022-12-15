@@ -25,7 +25,6 @@ jobs:
           with:
             working-directory: random-partition-py
             command: publish
-            args: --release
 
   # Apparently needed for Docker on Apple M1? pola-rs does this in their action
   # manylinux-aarch64:
