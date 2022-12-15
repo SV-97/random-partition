@@ -44,7 +44,7 @@ jobs:
           working-directory: random-partition-py
           target: aarch64-unknown-linux-gnu
           command: build
-          args: --release
+          args: --release -i python
 
   macos-aarch64:
     runs-on: macos-latest
@@ -53,6 +53,7 @@ jobs:
       - name: Set up Rust with apple target
         uses: dtolnay/rust-toolchain@master
         with:
+          toolchain: stable
           targets: aarch64-apple-darwin
       - uses: actions/setup-python@v4
         with:
@@ -65,4 +66,4 @@ jobs:
           working-directory: random-partition-py
           target: aarch64-unknown-linux-gnu
           command: build
-          args: --release --target aarch64-apple-darwin
+          args: --release --target aarch64-apple-darwin -i python
