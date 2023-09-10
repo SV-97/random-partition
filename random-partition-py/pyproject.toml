@@ -11,4 +11,6 @@ classifiers = [
     "Programming Language :: Python :: Implementation :: PyPy",
 ]
 
-
+[project.urls]
+"Homepage" = "https://github.com/SV-97/random-partition"
+"Bug Tracker" = "https://github.com/SV-97/random-partition/issues"
